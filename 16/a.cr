@@ -1,5 +1,5 @@
 def extract(s)
-  s.scan(/(\w+): (\d+)/).map { |m|
+  s.scan(/(\w+) *[:<=>]+ *(\d+)/).map { |m|
     {m[1], m[2].to_i }
   } .to_h
 end
